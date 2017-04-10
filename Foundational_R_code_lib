@@ -66,6 +66,12 @@ order_variable <- order(data_frame_a$column_c)               ## creates a variab
 data_frame_a[order_variable]                                 ## reorders the data frame based on the ranked order created above
 
 ### Lists - gathers a variety of objects under one name, containing all object types, in an ordered way ###
+list_a <- list(variable1, vector1, matrix1, dataframe1)      ## creates a list with any kind of object
+list_a <- list(name1 = object1, name2 = object 2)            ## creates a list with any kind of object and names for each object
+names(list_a) <- c("name1", "name2", etc.)                   ## renames an existing list
+list_a[[# or "object_name"]]                                 ## selects entire objects using a #, for the order in the list, or by name
+list_a[["object_name"]][element#/name]                       ## selects a specific element within an object    
+bigger_list <- c(list_a, object_name = new object)           ## adds and object to an existing list
                                                              
 
 
