@@ -31,6 +31,8 @@ vector_a[c("name1", "name3")]                    ## calls multiple specific elem
 vector_a[2:5]                                    ## calls a range of elements within a vector by position
 logical_comp_vector <- vector_a > 0              ## creates a new vector with TRUE/FALSE for all elements that are greater than 0
 vector[logical_comp_vector]                      ## calls only the elements in the orgi. vector that meet the criteria from above
+data_frame$variable1 <- ordered(data_frame$variable1, levels = c("Factor1", "factor2", etc.)) 
+                                                 ## Re-order an existing ordinal factor variable in priority order
 
 ### Matrices - two dimensional variable that can store one data type only ###
 matrix_a(elements_in_matrix, byrow = TRUE/FALSE, nrow = #)   ## creates a matrix with elements, by row or by column, with # of rows
@@ -72,6 +74,12 @@ names(list_a) <- c("name1", "name2", etc.)                   ## renames an exist
 list_a[[# or "object_name"]]                                 ## selects entire objects using a #, for the order in the list, or by name
 list_a[["object_name"]][element#/name]                       ## selects a specific element within an object    
 bigger_list <- c(list_a, object_name = new object)           ## adds and object to an existing list
+
+####################################### Data Summary and Comparison functions ##################################################
+table(data_frame$column_name_factor)                         ##returns counts of factor variables by level within the specified factor variable
+Summary(data_frame)                                          ## returns descriptive informaion and metrics for the specified object, results varying for vectors/data frames
+by(variable_1, breakdown_variable, function_applied)         ## breakdown variable_1 by a second variable/dimension, and then perform a summary function for comparison (summary, mean, sum, etc.)
+
                                                              
 
 
