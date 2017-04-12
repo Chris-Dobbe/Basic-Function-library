@@ -2,23 +2,27 @@
 ## Designed to be udpated as needed and referenced as I build up my skills and memorize these functions ##
 
 ################################# Basic Math functions #####################################
-1 + 2 ## addition
-3 - 1 ## subtraction
-2 * 3 ## multiplication
-10 / 5 ## division
-2 ^ 3 ## exponent
-20 %% 6 ## leftover division. provides the remainder after dividing the right # into the left #
-mean(variable_a) ## calculates the average of the elements in the variable/vector/object
-sum(variable_a) ## calculates the sum of the elements in the variable/vector/object
+1 + 2                   ## addition
+3 - 1                   ## subtraction
+2 * 3                   ## multiplication
+10 / 5                  ## division
+2 ^ 3                   ## exponent
+20 %% 6                 ## leftover division. provides the remainder after dividing the right # into the left #
+mean(variable_a)        ## calculates the average of the elements in the variable/vector/object
+sum(variable_a)         ## calculates the sum of the elements in the variable/vector/object
 
-################################# Logical Operators #########################################
+################################# Logical & Relational Operators #########################################
 ### all logical operators will result in a boolen response of either TRUE or FALSE ###
-3 > 2 ## greater than
-4.1 >= 4 ## greater than or equal to
-2 < 3 ## less than
-2.99 <= 3 ## less than or equal to
-3 = 3 ## equal to
-3 != 4 ## not equal to
+3 > 2                   ## greater than
+4.1 >= 4                ## greater than or equal to
+2 < 3                   ## less than
+2.99 <= 3               ## less than or equal to
+3 = 3                   ## equal to
+3 != 4                  ## not equal to
+TRUE & TRUE             ## & sign is 'AND' operator, returning true only if all logical values evaluated are TRUE
+TRUE | FALSE            ## | Pipe is 'OR' operator, returning true if any of logical values evaluated are TRUE
+!(TRUE)                 ## ! Not operator simply negates the logical value it is used on (ex. !is.num(var_x) would return TRUE/FALSE depending on where var_x was NOT a number)
+&&, ||                  ## Double logical operators only evaluate the first element in an object when used
 
 ################################# Basic Object building components ##########################
 ### Vectors - one dimensional variable that can store one data type only ###
@@ -75,12 +79,21 @@ list_a[[# or "object_name"]]                                 ## selects entire o
 list_a[["object_name"]][element#/name]                       ## selects a specific element within an object    
 bigger_list <- c(list_a, object_name = new object)           ## adds and object to an existing list
 
-####################################### Data Summary and Comparison functions ##################################################
+####################################### Conditional Statements - IF, ELSE, ELSE IF ##############################################
+if(condition) {                                              ## If statement establishes a condition of any kind, and will run the expression
+  expression executed if condition is met                    ##   in the curly brackets {} if it is TRUE, if FALSE, it will not run
+  } else if(2nd condition) {                                 ## Secondary if conditional that can be added for additional control flow
+  expression executed if 2nd condition is met                ##   and can contain as many else if statements as desired
+  } else {                                                   ## the else statement is the final 'fall back' expression that is executed
+  expression executed if none of above are TRUE              ##   if none of the if statements are TRUE, ending the control flow
+  }
+
+####################################### Data Summary, manipulation and Comparison functions ########################################
 table(data_frame$column_name_factor)                         ##returns counts of factor variables by level within the specified factor variable
 Summary(data_frame)                                          ## returns descriptive informaion and metrics for the specified object, results varying for vectors/data frames
 by(variable_1, breakdown_variable, function_applied)         ## breakdown variable_1 by a second variable/dimension, and then perform a summary function for comparison (summary, mean, sum, etc.)
-
-                                                             
+filter(column_name, filter_condition1, filter_condition2)    ## Extracts rows of data from an object according to given logical criteria
+str_detect(column_name, "text_string")                       ## Searches for a string of text within a specified object, returning all results                                                          
 
 
 
