@@ -56,6 +56,8 @@ factor_vector <- factor(vector1, order = TRUE, levels = c(low_value, med_value, 
                                                              ## Creates an ordinal factor vector, by reading values in vector 1, and
                                                              ## assigning them a value order from low to high based on your input
 levels(factor_vector) <- c("new_factor_name1, etc.)          ## rename the factor levels (male/low/high/etc.) alphabetically
+Data_frame$variable1 <- ordered(data_frame$variable1, levels = c("factor1", "factor2", etc.)
+                                                             ## This will reorder an existing factor from first to last)
 summary(any_object)                                          ## provides quick summary information on the given object
 
 ### Data Frames - A two dimensional object that can contain multiple data types, containing rows and columns (set up like pivot table)
