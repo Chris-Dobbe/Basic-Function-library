@@ -11,6 +11,7 @@
 mean(variable_a)                         ## calculates the average of the elements in the variable/vector/object
 sum(variable_a)                          ## calculates the sum of the elements in the variable/vector/object
 seq(num_start, num_end, by=num_interval  ## Creates a numerical sequence between certain values and at a specified interval
+rep(value_sequence, num_repeat)          ## Creates a vector repeating a specified sequence a number of times
 
 ################################# Logical & Relational Operators #########################################
 ### all logical operators will result in a boolen response of either TRUE or FALSE ###
