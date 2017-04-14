@@ -2,14 +2,15 @@
 ## Designed to be udpated as needed and referenced as I build up my skills and memorize these functions ##
 
 ################################# Basic Math functions #####################################
-1 + 2                   ## addition
-3 - 1                   ## subtraction
-2 * 3                   ## multiplication
-10 / 5                  ## division
-2 ^ 3                   ## exponent
-20 %% 6                 ## leftover division. provides the remainder after dividing the right # into the left #
-mean(variable_a)        ## calculates the average of the elements in the variable/vector/object
-sum(variable_a)         ## calculates the sum of the elements in the variable/vector/object
+1 + 2                                    ## addition
+3 - 1                                    ## subtraction
+2 * 3                                    ## multiplication
+10 / 5                                   ## division
+2 ^ 3                                    ## exponent
+20 %% 6                                  ## leftover division. provides the remainder after dividing the right # into the left #
+mean(variable_a)                         ## calculates the average of the elements in the variable/vector/object
+sum(variable_a)                          ## calculates the sum of the elements in the variable/vector/object
+seq(num_start, num_end, by=num_interval  ## Creates a numerical sequence between certain values and at a specified interval
 
 ################################# Logical & Relational Operators #########################################
 ### all logical operators will result in a boolen response of either TRUE or FALSE ###
